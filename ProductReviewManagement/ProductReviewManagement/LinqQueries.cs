@@ -25,6 +25,23 @@ namespace ProductReviewManagement
                     + " review :" + list.Review + " like :" + list.Like);
             }
         }
-        
+        /// <summary>
+        /// UC3-Rating greater than 3 and product id is 1, 4 and 9 in list
+        /// </summary>
+        /// <param name="listproductReviews"></param>
+        public void SelectedRecords(List<ProductReview> listproductReviews)
+        {
+            var recordedData = from ProductReviews in listproductReviews
+                               where (ProductReviews.productID == 1 && ProductReviews.Rating > 3) ||
+                               (ProductReviews.productID == 4 && ProductReviews.Rating > 3) ||
+                               (ProductReviews.productID == 9 && ProductReviews.Rating > 3)
+                               select ProductReviews;
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine(" productid :" + list.productID + " userid :" + list.UserID + " rating :" + list.Rating
+                    + " review :" + list.Review + " like :" + list.Like);
+            }
+        }
+
     }
 }

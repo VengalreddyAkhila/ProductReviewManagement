@@ -41,11 +41,16 @@ namespace ProductReviewManagement
             //    Console.WriteLine("productid :" + list.productID + "userid :" + list.UserID + "rating :" + list.Rating
             //        + "review :" + list.Review + "like :" + list.Like);
             //}
+
             /// <summary>
             /// UC2-Get top 3 reviews in list
             /// </summary>
+            //LinqQueries linqQueries = new LinqQueries();
+            //linqQueries.Toprecords(productReviewList);
+            //
+            //UC3-Get whos Rating is greater 3 product id is 1 , 4 and 9 in list
             LinqQueries linqQueries = new LinqQueries();
-            linqQueries.Toprecords(productReviewList);
+            linqQueries.SelectedRecords(productReviewList);
 
         }
     }

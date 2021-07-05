@@ -36,11 +36,16 @@ namespace ProductReviewManagement
                 new ProductReview(){productID=24,UserID= 11,Review = "average",Rating = 4,Like=true},
                 new ProductReview(){productID=25,UserID= 29,Review = "better",Rating = 3,Like=true},
             };
-            foreach (var list in productReviewList)
-            {
-                Console.WriteLine("productid :" + list.productID + "userid :" + list.UserID + "rating :" + list.Rating
-                    + "review :" + list.Review + "like :" + list.Like);
-            }
+            //foreach (var list in productReviewList)
+            //{
+            //    Console.WriteLine("productid :" + list.productID + "userid :" + list.UserID + "rating :" + list.Rating
+            //        + "review :" + list.Review + "like :" + list.Like);
+            //}
+            /// <summary>
+            /// UC2-Get top 3 reviews in list
+            /// </summary>
+            LinqQueries linqQueries = new LinqQueries();
+            linqQueries.Toprecords(productReviewList);
 
         }
     }

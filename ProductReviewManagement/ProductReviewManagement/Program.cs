@@ -47,10 +47,14 @@ namespace ProductReviewManagement
             /// </summary>
             //LinqQueries linqQueries = new LinqQueries();
             //linqQueries.Toprecords(productReviewList);
-            //
+
             //UC3-Get whos Rating is greater 3 product id is 1 , 4 and 9 in list
+            //LinqQueries linqQueries = new LinqQueries();
+            //linqQueries.SelectedRecords(productReviewList);
+
+            //UC4-
             LinqQueries linqQueries = new LinqQueries();
-            linqQueries.SelectedRecords(productReviewList);
+            linqQueries.RetriewCountToData(productReviewList);
 
         }
     }

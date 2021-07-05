@@ -52,10 +52,13 @@ namespace ProductReviewManagement
             //LinqQueries linqQueries = new LinqQueries();
             //linqQueries.SelectedRecords(productReviewList);
 
-            //UC4-
-            LinqQueries linqQueries = new LinqQueries();
-            linqQueries.RetriewCountToData(productReviewList);
+            //UC4-count for review for each product id
+            //LinqQueries linqQueries = new LinqQueries();
+            //linqQueries.RetriewCountToData(productReviewList);
 
+            //UC5-Only product Id from list of all record
+            LinqQueries linqQueries = new LinqQueries();
+            linqQueries.RetriveProductData(productReviewList);
         }
     }
 }

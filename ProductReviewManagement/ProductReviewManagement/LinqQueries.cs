@@ -55,6 +55,18 @@ namespace ProductReviewManagement
                 Console.WriteLine(list.productID + "-----" + list.count);
             }
         }
+        /// <summary>
+        /// UC5-Retrive Only ProductId
+        /// </summary>
+        /// <param name="listproductReviews"></param>
+        public void RetriveProductData(List<ProductReview> listproductReviews)
+        {
+            var recordedData = listproductReviews.GroupBy(x => x.productID).Select(x => new { productID = x.Key });
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine(list.productID);
+            }
+        }
 
     }
 }

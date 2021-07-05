@@ -61,8 +61,12 @@ namespace ProductReviewManagement
             //linqQueries.RetriveProductData(productReviewList);
 
             //UC6-Skip top 5 records from list
+            //LinqQueries linqQueries = new LinqQueries();
+            //linqQueries.SkipRecords(productReviewList);
+
+            //UC7-Retriew only product id and review
             LinqQueries linqQueries = new LinqQueries();
-            linqQueries.SkipRecords(productReviewList);
+            linqQueries.RetriveIdAndReviewData(productReviewList);
         }
     }
 }

@@ -82,6 +82,18 @@ namespace ProductReviewManagement
                     + " review :" + list.Review + " like :" + list.Like);
             }
         }
+        /// <summary>
+        /// UC7-Retrive Only ProductId and review
+        /// </summary>
+        /// <param name="listproductReviews"></param>
+        public void RetriveIdAndReviewData(List<ProductReview> listproductReviews)
+        {
+            var recordedData = from ProductReview  in listproductReviews  select new { ProductReview.productID,ProductReview.Review };
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine(list.productID+""+list.Review);                
+            }
+        }
 
     }
 }

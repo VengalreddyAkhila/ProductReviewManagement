@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace ProductReviewManagement
 {
@@ -65,8 +66,13 @@ namespace ProductReviewManagement
             //linqQueries.SkipRecords(productReviewList);
 
             //UC7-Retriew only product id and review
-            LinqQueries linqQueries = new LinqQueries();
-            linqQueries.RetriveIdAndReviewData(productReviewList);
-        }
+            //LinqQueries linqQueries = new LinqQueries();
+            //linqQueries.RetriveIdAndReviewData(productReviewList);
+
+            //UC8-Create a datatable with product details
+            ProductReviewTable table = new ProductReviewTable();
+            table.CreateDataTable();
+
+        }  
     }
 }

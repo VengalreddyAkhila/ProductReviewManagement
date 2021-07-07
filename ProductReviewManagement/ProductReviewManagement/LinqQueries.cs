@@ -94,6 +94,29 @@ namespace ProductReviewManagement
                 Console.WriteLine(list.productID+""+list.Review);                
             }
         }
+        /// <summary>
+        /// UC-8 Create a datatablr for product review management
+        /// </summary>
+        /// <param name="dataTable"></param>
+        public void PrintTable(DataTable dataTable)
+        {
+            var Products = from products in dataTable.AsEnumerable()
+                           select (products.Field<int>("ProductID"), products.Field<int>("UserID"), products.Field<int>("Rating"),
+                                products.Field<string>("Review"), products.Field<bool>("Like"));
+            PrintDataTable(Products);
+        }
+        /// <summary>
+        /// printing datatable
+        /// </summary>
+        /// <param name="products"></param>
+        private void PrintDataTable(EnumerableRowCollection<(int, int, int, string, bool)> products)
+        {
+            Console.WriteLine("ProductID   UserID   Rating   Review       Like");
+            foreach (var list in products)
+            {
+                Console.WriteLine("productID:"+list.Item1 +" UserID:"+list.Item2+" Rating:"+list.Item3+" Review:"+list.Item4+" Like:"+list.Item5);
+            }
+        }
 
     }
 }

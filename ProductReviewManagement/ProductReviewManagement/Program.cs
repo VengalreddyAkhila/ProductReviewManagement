@@ -101,12 +101,15 @@ namespace ProductReviewManagement
             Console.WriteLine("DataTable is Created");           
             LinqQueries linqQueries = new LinqQueries();
             //linqQueries.PrintTable(datatable);
-            
+
             //UC9-print table whos value is true 
             //linqQueries.PrintLikevalues(datatable);
 
-            //UC10-Print table who rating is Better
-            linqQueries.PrintAverageRating(datatable);
+            //UC10-Print table who rating is Average
+            // linqQueries.AverageRating(datatable);
+
+            //UC11-print table whos freview is nice
+            linqQueries.PrintReviewNice(datatable);
 
         }  
     }

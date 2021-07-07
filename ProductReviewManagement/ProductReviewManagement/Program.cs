@@ -94,7 +94,7 @@ namespace ProductReviewManagement
             datatable.Rows.Add(14, 1, 10, "Excellent", true);
             datatable.Rows.Add(15, 1, 2, "nice", false);
             datatable.Rows.Add(16, 1, 6, "Worst", false);
-            datatable.Rows.Add(17, 1, 4, "better", false);
+            datatable.Rows.Add(17, 1, 4, "Better", false);
             datatable.Rows.Add(18, 1, 9, "nice", false);
             datatable.Rows.Add(19, 1, 1, "Bad", false);
             datatable.Rows.Add(20, 1, 7, "nice", false);
@@ -103,7 +103,10 @@ namespace ProductReviewManagement
             //linqQueries.PrintTable(datatable);
             
             //UC9-print table whos value is true 
-            linqQueries.PrintLikevalues(datatable);
+            //linqQueries.PrintLikevalues(datatable);
+
+            //UC10-Print table who rating is Better
+            linqQueries.PrintAverageRating(datatable);
 
         }  
     }

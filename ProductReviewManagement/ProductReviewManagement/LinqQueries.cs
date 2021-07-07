@@ -129,6 +129,18 @@ namespace ProductReviewManagement
                            product.Field<string>("Review"), product.Field<bool>("Like"));
             PrintDataTable(products);
         }
+        /// <summary>
+        /// UC10-print all records who review is better
+        /// </summary>
+        /// <param name="dataTable"></param>
+        public void PrintAverageRating(DataTable dataTable)
+        {
+            var products = from product in dataTable.AsEnumerable()
+                           where (product.Field<string>("Review").Contains("Better"))
+                           select (product.Field<int>("ProductID"), product.Field<int>("UserID"), product.Field<int>("Rating"),
+                           product.Field<string>("Review"), product.Field<bool>("Like"));
+            PrintDataTable(products);
+        }
 
     }
 }

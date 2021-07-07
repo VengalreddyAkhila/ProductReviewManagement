@@ -100,7 +100,10 @@ namespace ProductReviewManagement
             datatable.Rows.Add(20, 1, 7, "nice", false);
             Console.WriteLine("DataTable is Created");           
             LinqQueries linqQueries = new LinqQueries();
-            linqQueries.PrintTable(datatable);
+            //linqQueries.PrintTable(datatable);
+            
+            //UC9-print table whos value is true 
+            linqQueries.PrintLikevalues(datatable);
 
         }  
     }

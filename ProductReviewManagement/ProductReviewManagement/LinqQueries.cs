@@ -117,6 +117,18 @@ namespace ProductReviewManagement
                 Console.WriteLine("productID:"+list.Item1 +" UserID:"+list.Item2+" Rating:"+list.Item3+" Review:"+list.Item4+" Like:"+list.Item5);
             }
         }
+        /// <summary>
+        /// UC9-Print all like value is true
+        /// </summary>
+        /// <param name="dataTable"></param>
+        public void PrintLikevalues(DataTable dataTable)
+        {
+            var products = from product in dataTable.AsEnumerable()
+                           where (product.Field<bool>("Like") == true)
+                           select (product.Field<int>("ProductID"), product.Field<int>("UserID"), product.Field<int>("Rating"),
+                           product.Field<string>("Review"), product.Field<bool>("Like"));
+            PrintDataTable(products);
+        }
 
     }
 }
